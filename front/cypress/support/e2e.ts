@@ -16,4 +16,8 @@
 // When a command from ./commands is ready to use, import with `import './commands'` syntax
 // import './commands';
 
+// Charge les commandes custom
+import './commands';
+
+// Active le support pour la couverture
 import '@cypress/code-coverage/support';

@@ -41,3 +41,86 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+// cypress/support/commands.ts
+
+// Simule un utilisateur connecté (non-admin)
+/*
+Cypress.Commands.add('loginAsUser', () => {
+  cy.visit('/', {
+    onBeforeLoad(win) {
+      win.sessionStorage.setItem('sessionInformation', JSON.stringify({
+        token: 'fake-token',
+        type: 'Bearer',
+        id: 1,
+        username: 'julio',
+        firstName: 'Julio',
+        lastName: 'Tester',
+        admin: false
+      }));
+    }
+  });
+});
+*/
+
+
+
+Cypress.Commands.add('setSession', () => {
+  cy.visit('/', {
+    onBeforeLoad(win) {
+      win.sessionStorage.setItem(
+        'sessionInformation',
+        JSON.stringify({
+          token: 'fake-token',
+          type: 'Bearer',
+          id: 1,
+          username: 'julio',
+          firstName: 'Julio',
+          lastName: 'Tester',
+          admin: false
+        })
+      );
+    }
+  });
+});
+
+
+// cypress/support/commands.ts
+Cypress.Commands.add('loginAsUser', () => {
+  cy.visit('/', {
+    onBeforeLoad(win) {
+      win.sessionStorage.setItem(
+        'sessionInformation',
+        JSON.stringify({
+          token: 'fake-token',
+          type: 'Bearer',
+          id: 1,
+          username: 'julio',
+          firstName: 'Julio',
+          lastName: 'Tester',
+          admin: false
+        })
+      );
+    }
+  });
+});
+
+
+Cypress.Commands.add('loginAsAdmin', () => {
+  cy.visit('/', {
+    onBeforeLoad(win) {
+      win.sessionStorage.setItem('sessionInformation', JSON.stringify({
+        token: 'fake-token',
+        type: 'Bearer',
+        id: 99,
+        username: 'admin',
+        firstName: 'Admin',
+        lastName: 'User',
+        admin: true
+      }));
+    }
+  });
+});
+
+
+

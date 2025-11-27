@@ -8,8 +8,8 @@ module.exports = {
   bail: false,
   verbose: false,
   collectCoverage: false,
-  coverageDirectory: './coverage/jest',
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '/cypress/'],
+  coverageDirectory: './coverage/jest/unit',
+  testPathIgnorePatterns: ['\\.int\\.spec\\.ts$', '<rootDir>/node_modules/', '/cypress/'],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/cypress/e2e/'  // <-- ignore tous les fichiers Cypress

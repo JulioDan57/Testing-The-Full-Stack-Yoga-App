@@ -4,11 +4,11 @@ module.exports = {
   },
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
-  testMatch: ['**/+(*.)+(spec).ts'],  // <-- ne pas inclure cypress/e2e  
+  testMatch: ['**/+(*.)+(int.spec).ts'],  // <-- ne pas inclure cypress/e2e  
   bail: false,
   verbose: false,
   collectCoverage: false,
-  coverageDirectory: './coverage/jest',
+  coverageDirectory: './coverage/jest/integration',
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '/cypress/'],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',

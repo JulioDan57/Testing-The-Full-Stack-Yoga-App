@@ -1,12 +1,13 @@
-# Yoga
+# Yoga (Front-end)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
+is an interactive web page that helps users manage their yoga sessions.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
 
 ## Start the project
 
 Git clone:
 
-> git clone https://github.com/OpenClassrooms-Student-Center/P5-Full-Stack-testing
+> git clone https://github.com/JulioDan57/Testing-The-Full-Stack-Yoga-App
 
 Go inside folder:
 
@@ -49,24 +50,50 @@ By default the admin account is:
 
 #### E2E
 
-Launching e2e test:
+Launching e2e tests:
 
-> npm run e2e
+-Open a terminal and run a server for testing purpose by using the command : 
+> ng run yoga:serve-coverage
 
-Generate coverage report (you should launch e2e test before):
+-To perform all the e2e tests (you should launch yoga:serve-coverage before) :
+1. Open a new terminal and perform all the e2e tests by using the command :
+> npx cypress run
+
+2. Generate coverage report (you should launch npx cypress run command before):
 
 > npm run e2e:coverage
 
-Report is available here:
+Coverage summary report is shown in terminal, and the detailed coverage report is available here:
 
 > front/coverage/lcov-report/index.html
 
-#### Unitary test
+#### Unitary tests
 
-Launching test:
+Launching tests:
 
-> npm run test
+> npm run test:unit   
 
-for following change:
+Coverage report is shown in terminal, interactive coverage report is available here: 
 
-> npm run test:watch
+> front/coverage/jest/unit/lcov-report/index.html
+
+
+#### Integration tests
+
+Launching tests:
+
+> npm run test:integration
+
+Coverage report is shown in terminal, interactive coverage report is available here: 
+
+> front/coverage/jest/integration/lcov-report/index.html
+
+#### Unitary and Integration tests
+
+Launching tests:
+
+> npm run test:coverage
+
+Coverage report is shown in terminal, interactive coverage report is available here: 
+
+> front/coverage/jest/lcov-report/index.html

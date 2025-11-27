@@ -10,6 +10,7 @@ export default defineConfig({
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
       return require('./cypress/plugins/index.ts').default(on, config)
+      //return config
     },
     baseUrl: 'http://localhost:4200',
   },
