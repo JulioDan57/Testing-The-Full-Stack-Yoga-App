@@ -45,7 +45,15 @@ By default the admin account is:
 - login: yoga@studio.com
 - password: test!1234
 
-
+## Technologies 
+- TypeScript
+- SCSS
+- Angular
+- Jest
+- Cypress
+- Angular Material
+- Project developed with Visual Studio Code 
+ 
 ## Test
 
 ### E2E
